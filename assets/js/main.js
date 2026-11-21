@@ -11,6 +11,26 @@ const BUSINESS = /* BUSINESS_CONFIG_START */ {
 } /* BUSINESS_CONFIG_END */;
 
 (() => {
+  const analyticsId = "G-4YWQ8DR0JC";
+  const analyticsEnabled = ["driveonkerala.com", "www.driveonkerala.com"].includes(window.location.hostname);
+  if (analyticsEnabled) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", analyticsId, {
+      send_page_view: false,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      page_location: window.location.origin + window.location.pathname,
+      page_referrer: document.referrer ? new URL(document.referrer).origin : ""
+    });
+    window.gtag("event", "page_view");
+    const tag = document.createElement("script");
+    tag.async = true;
+    tag.src = "https://www.googletagmanager.com/gtag/js?id=" + analyticsId;
+    document.head.append(tag);
+  }
+
   const whatsappReady = /^[1-9]\d{7,14}$/.test(BUSINESS.whatsapp);
   const phoneReady = /^\+[1-9]\d{7,14}$/.test(BUSINESS.phone);
   const message = "Hello Drive On! I would like to plan a driver-included trip from Kochi.";
@@ -18,6 +38,12 @@ const BUSINESS = /* BUSINESS_CONFIG_START */ {
   // No third-party tracking by default. Never include travellers' form values.
   function track(name, detail = {}) {
     document.dispatchEvent(new CustomEvent("driveon:analytics", { detail: { event: name, ...detail } }));
+    if (!analyticsEnabled) return;
+    if (name === "whatsapp_click") {
+      window.gtag("event", detail.source === "quote_form" ? "whatsapp_quote_open" : "whatsapp_contact_open");
+    } else if (name === "phone_click" || name === "quote_start" || name === "vehicle_quote_click") {
+      window.gtag("event", name);
+    }
   }
   document.querySelectorAll("[data-business]").forEach(el => {
     const value = BUSINESS[el.dataset.business];
