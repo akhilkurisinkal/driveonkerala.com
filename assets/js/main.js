@@ -70,7 +70,12 @@ const BUSINESS = /* BUSINESS_CONFIG_START */ {
   document.addEventListener("keydown", event => {
     if (event.key === "Escape" && mobile.matches && !nav.hidden) { nav.hidden = true; toggle.setAttribute("aria-expanded", "false"); toggle.focus(); }
   });
+  const quoteParams = new URLSearchParams(window.location.search);
+  const suggestedRoute = quoteParams.get("route")?.trim().slice(0, 200);
+  const preferredVehicle = quoteParams.get("vehicle")?.trim().slice(0, 80);
   document.querySelectorAll("[data-quote-form]").forEach(form => {
+    if (suggestedRoute && !form.elements.destination.value) form.elements.destination.value = suggestedRoute;
+    if (preferredVehicle && !form.elements.details.value) form.elements.details.value = "Preferred vehicle: " + preferredVehicle;
     const status = form.querySelector("[data-quote-status]");
     const button = form.querySelector("[data-quote-submit]");
     button.disabled = !whatsappReady;
@@ -88,7 +93,9 @@ const BUSINESS = /* BUSINESS_CONFIG_START */ {
       const text = `Hello Drive On! I would like a driver-included trip quote.\nPick-up: ${data.get("pickup").trim()}\nRoute: ${data.get("destination").trim()}\nDate: ${data.get("date")}\nTravellers: ${data.get("passengers")}\nDetails: ${data.get("details").trim() || "None added"}\nPlease confirm vehicle availability, total charges, inclusions and booking terms.`;
       track("quote_submit");
       track("whatsapp_click", { source: "quote_form", configured: true });
-      const url = `https://wa.me/${BUSINESS.whatsapp}?text=${encodeURIComponent(text)}`;
+      const source = form.dataset.quoteSource;
+      const message = source ? text + "\nEnquiry page: " + source : text;
+      const url = `https://wa.me/${BUSINESS.whatsapp}?text=${encodeURIComponent(message)}`;
       status.hidden = false;
       status.textContent = "Your message is ready. Review and send it in WhatsApp; your booking is not yet confirmed. ";
       const link = document.createElement("a"); link.href = url; link.textContent = "Open WhatsApp"; status.append(link);
