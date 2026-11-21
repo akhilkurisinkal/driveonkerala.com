@@ -4,7 +4,7 @@
 const BUSINESS = /* BUSINESS_CONFIG_START */ {
   "name": "Drive On Tours & Travels",
   "phone": "+919895122149",
-  "whatsapp": "",
+  "whatsapp": "919895122149",
   "email": "",
   "location": "",
   "siteUrl": ""
