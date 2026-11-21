@@ -1,0 +1,3 @@
+# PRE-LAUNCH: Replace with Allow: / and add the verified Sitemap URL when ready.
+User-agent: *
+Disallow: /

@@ -1,0 +1,109 @@
+/* Simple homepage sections using the Drive On red, black and neutral palette. */
+.home-page{--ink:#242525;--muted:#626262;--paper:#fff;--white:#fff;--line:#e3e3e3;--orange:#f4f4f4;--soft:#f5f5f5;background:#fff}
+.home-page .site-header{background:#fff;border-color:#e5e5e5}
+.home-page main>.container:not(.panorama-hero),.home-page main>.section>.container{width:min(1220px,calc(100% - 64px))}
+.home-page .section{padding-block:64px}
+.home-page .section h2,.home-page .quote-panel h2{color:#222;font-size:clamp(30px,3vw,40px);font-weight:500;line-height:1.18;letter-spacing:-1.3px}
+.home-page .section-heading{gap:32px;margin-bottom:28px}
+.home-page .section-heading>p{font-size:13px;color:#666}
+.home-page main .eyebrow{color:#a82027;font-size:9px;letter-spacing:1.5px;margin-bottom:14px}
+.home-page .text-link{min-height:44px;display:inline-flex;align-items:center;font-size:12px;border-bottom:0;text-decoration:underline;text-decoration-color:#bdbdbd}
+.home-page .text-link:hover{color:#a82027}
+.home-page .quote-wrap{padding-block:48px}
+.home-page .quote-panel{background:#f7f7f7;border:0;border-radius:4px;box-shadow:none;padding:36px;grid-template-columns:.8fr 1.4fr;gap:48px}
+.home-page .quote-panel h2{font-size:34px;max-width:300px}
+.home-page .quote-panel>div>p:not(.eyebrow){font-size:14px;max-width:300px;color:#626262}
+.home-page .quote-panel input,.home-page .quote-panel textarea{background:#fff;border:1px solid #d3d3d3;border-radius:3px;font-size:13px;min-height:46px}
+.home-page .quote-panel .button{font-size:13px}
+
+.home-page .form-note,.home-page .setup-note{font-size:10px;color:#666}
+.home-page .setup-note{background:transparent;border:0;padding:0}
+.home-page .group-grid{gap:28px}
+.home-page .group-card{padding:22px 0 0;border:0;border-top:1px solid #d5d5d5;background:transparent;border-radius:0}
+.home-page .card-number{font-size:9px;color:#777;letter-spacing:1px;margin-bottom:20px}
+.home-page .group-card h3{font-size:25px;font-weight:500;max-width:260px;color:#242525}
+.home-page .group-card p{font-size:12px;color:#666}
+.home-page .section-tinted{background:#f7f7f7}
+.home-page .vehicle-grid{gap:24px}
+.home-page .vehicle-card{background:#fff;border:0;border-radius:4px;box-shadow:none;display:flex;flex-direction:column}
+.home-page .vehicle-card .catalog-photo{border-radius:0;background:#fff}
+.home-page .vehicle-card .catalog-photo img{height:220px;background:#fff}
+.home-page .card-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.home-page .card-body h3{font-size:23px;font-weight:500;margin-bottom:12px}
+.home-page .card-body .fleet-spec{background:transparent;padding:0;margin:0 0 12px;color:#777;font-size:11px!important}
+.home-page .card-body>p{font-size:13px;line-height:1.7}
+.home-page .card-body .text-link{margin-top:auto;color:#a82027}
+.home-page .fleet-availability{font-size:10px;color:#777;margin:20px 0 0}
+.home-page .feature{gap:44px;grid-template-columns:1.2fr 1fr;align-items:center}
+.home-page .journey-photo{margin:0;border-radius:6px;overflow:hidden;background:#fff;border:1px solid #ededed}
+.home-page .journey-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;padding:clamp(16px,2.5vw,36px);background:#fff}
+.home-page .feature-copy>p{font-size:14px}
+.home-page .feature-copy .small-note{font-size:10px}
+.home-page .check-list li{font-size:13px;border-color:#e5e5e5}
+.home-page .check-list li:before{color:#a82027}
+.home-page .feature-copy .button{background:#a82027;border-color:#a82027;font-size:12px}
+.home-page .feature+section{padding-top:24px}
+.home-page .use-grid{gap:26px}
+.home-page .use-grid article{border-top:1px solid #d5d5d5;padding-top:20px}
+.home-page .use-grid h3{font-size:19px;font-weight:500}
+.home-page .use-grid p{font-size:12px;color:#666}
+.home-page .use-grid a{display:inline-flex;align-items:center;min-height:44px;font-size:11px;color:#a82027}
+.home-page .routes-section{background:#f7f7f7;color:#242525}
+.home-page .routes-section p,.home-page .route-index,.home-page .route-list h3 span{color:#777}
+.home-page .route-list>a,.home-page .route-list>a:last-child{border-color:#ddd;padding-block:20px}
+.home-page .route-list h3{font-size:24px}
+.home-page .route-list>a>span:last-child{color:#a82027}
+.home-page .routes-section .small-note{font-size:10px}
+.home-page .three-grid{gap:32px}
+.home-page .info-card{border:0;border-top:1px solid #d5d5d5;border-radius:0;padding:22px 0 0}
+.home-page .info-card h3{font-size:21px;font-weight:500}
+.home-page .info-card p{font-size:13px;color:#666}
+.home-page .booking{border-color:#e3e3e3;gap:48px}
+.home-page .steps li:before{border-color:#d5d5d5;color:#a82027}
+.home-page .steps h3{font-size:21px;font-weight:500}
+.home-page .final-cta{background:#f5f5f5;border-radius:4px;padding:40px;margin-bottom:64px}
+.home-page .final-cta h2{font-size:clamp(30px,3vw,40px);color:#242525;font-weight:500;letter-spacing:-1.3px}
+.home-page .final-cta .button{background:#a82027;border-color:#a82027;font-size:13px}
+.home-page .site-footer{background:#f7f7f7;border-top:1px solid #e3e3e3;padding-top:44px}
+.home-page .footer-grid h2{font-size:13px;font-weight:600}
+.home-page .footer-grid a:not(.brand){min-height:28px;text-decoration:none}
+.home-page .footer-grid a:hover{text-decoration:underline}
+.home-page .footer-grid p,.home-page .footer-grid small{color:#666}
+.home-page .footer-bottom{border-color:#ddd;color:#666}
+@media(max-width:900px){
+ .home-page .quote-panel{grid-template-columns:1fr;gap:24px;padding:28px}
+ .home-page .quote-panel h2,.home-page .quote-panel>div>p:not(.eyebrow){max-width:none}
+ .home-page .quote-panel>div>p:last-child{margin-bottom:0}
+ .home-page .section-heading{align-items:start;flex-direction:column;gap:16px}
+ .home-page .section-heading>p{max-width:520px}
+ .home-page .vehicle-grid{gap:16px}.home-page .card-body{padding:20px}
+ .home-page .vehicle-card .catalog-photo img{height:180px}
+ .home-page .feature{gap:30px}.home-page .use-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:640px){
+ .home-page main>.container:not(.panorama-hero),.home-page main>.section>.container{width:calc(100% - 40px)}
+ .home-page .section{padding-block:44px}.home-page .quote-wrap{padding-block:32px}
+ .home-page .quote-panel{padding:24px}.home-page .quote-panel h2{font-size:30px}
+ .home-page .form-grid{grid-template-columns:1fr}
+ .home-page .group-grid,.home-page .vehicle-grid,.home-page .three-grid,.home-page .feature,.home-page .booking{grid-template-columns:1fr}
+ .home-page .group-grid{gap:18px}.home-page .group-card h3{max-width:none;font-size:25px}
+ .home-page .card-number{margin-bottom:14px}.home-page .vehicle-card .catalog-photo img{height:220px}
+ .home-page .card-body{padding:24px}.home-page .use-grid{grid-template-columns:1fr 1fr;gap:24px 20px}
+ .home-page .route-list h3{font-size:22px}.home-page .route-list h3 span:nth-child(2){margin:0 8px}
+ .home-page .final-cta{padding:28px;margin-bottom:44px;align-items:start;flex-direction:column}
+ .home-page .booking{gap:24px}
+}
+
+@media(min-width:641px) and (max-width:900px){.home-page .feature{grid-template-columns:1fr}.home-page .feature-visual{width:100%}.home-page .feature-copy{max-width:620px}}
+
+/* One concise booking section replaces the repeated approach and process blocks. */
+.home-page .booking-simple{padding-block:48px}
+.home-page .booking-heading{margin-bottom:28px}
+.home-page .booking-heading h2{font-size:30px;letter-spacing:-.8px;margin:0 0 8px}
+.home-page .booking-heading p{font-size:14px;margin:0;color:#666}
+.home-page .booking-flow{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding:0;margin:0}
+.home-page .booking-flow li{display:flex;align-items:start;gap:14px;border-top:1px solid #e3e3e3;padding-top:20px}
+.home-page .booking-flow li>span{font-size:12px;font-weight:600;color:#a82027;padding-top:3px}
+.home-page .booking-flow h3{font-size:19px;font-weight:500;letter-spacing:-.3px;margin:0 0 8px}
+.home-page .booking-flow p{font-size:13px;line-height:1.7;color:#666;margin:0;max-width:310px}
+@media(max-width:700px){.home-page .booking-simple{padding-block:36px}.home-page .booking-flow{grid-template-columns:1fr;gap:20px}.home-page .booking-heading{margin-bottom:22px}.home-page .booking-flow p{max-width:none}}
