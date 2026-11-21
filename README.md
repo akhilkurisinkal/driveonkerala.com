@@ -22,7 +22,7 @@ All site links and assets use relative paths, so the site works under a GitHub P
 
 ## Existing configuration
 
-- The phone number is configured. WhatsApp is empty in `assets/js/main.js`, so the WhatsApp quote form remains disabled and the phone contact remains available. Add the confirmed WhatsApp number, with country code and digits only, to enable it.
+- The phone and WhatsApp numbers are configured in `assets/js/main.js`. The quote form opens a WhatsApp chat with the trip details filled in for the traveller to review and send.
 - The existing search-engine restrictions (`noindex, nofollow` and `robots.txt`) are preserved. Visitors can view the deployed site, but it is configured to discourage search indexing. Change these when ready for indexing.
 - No domain, canonical URL, or sitemap URL has been invented. Set those once the final public URL is known.
 - This copy preserves the existing images and content. Image provenance is recorded in the original project's `assets/images/fleet/CATALOG-SOURCES.md`.
